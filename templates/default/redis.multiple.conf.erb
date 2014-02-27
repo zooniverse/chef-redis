@@ -93,7 +93,7 @@ dir <%= @dir %>
 # This should stay commented out for backward compatibility and because most
 # people do not need auth (e.g. they run their own servers).
 #
-<% if @password %>
+<% unless @password.empty? %>
 requirepass <%= @password %>
 <% end %>
 
